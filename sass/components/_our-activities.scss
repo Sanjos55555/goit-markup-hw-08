@@ -1,0 +1,41 @@
+.our-activities-wrapper {
+  padding-bottom: 94px;
+
+  &__header {
+    text-align: $ta-c;
+    @include ff-fw-fz-lh-ls-col($ff-roboto, 700, 36px, 1.16, 0.03em, $color-black);
+    margin-top: 0;
+    margin-bottom: 50px;
+  }
+
+  .our-activities-images {
+    display: $dispf;
+    list-style: none;
+    justify-content: $jc-sb;
+    margin: 0 auto;
+    padding: 0px;
+    padding-top: 0px;
+    gap: 30px;
+
+    &__img-position {
+      position: relative;
+      width: 370px;
+    }
+
+    &__text-wrapper {
+      position: absolute;
+      width: 370px;
+      height: 70px;
+      top: 224px;
+      background: $bg-our-act;
+    }
+
+    &__text-position {
+      text-transform: uppercase;
+      text-align: $ta-c;
+      @include ff-fw-fz-lh-ls-col($ff-roboto, 700, 14px, 1.14, 0.03em, $color-white);
+      margin: 0;
+      padding: 27px;
+    }
+  }
+}

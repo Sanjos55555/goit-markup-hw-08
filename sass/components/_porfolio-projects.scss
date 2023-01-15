@@ -1,0 +1,89 @@
+.portfolio-projects {
+  display: $dispf;
+  flex-wrap: wrap;
+  list-style-type: none;
+  justify-content: $jc-sb;
+  margin-top: 0;
+  padding: 0;
+  padding-bottom: 94px;
+  gap: 30px;
+
+  &__images-shadow:hover {
+    border: 0px solid $border-images;
+    box-shadow: $portfolio-img-shad;
+    cursor: pointer;
+    transition: $trans;
+  }
+
+  &__project-name {
+    @include ff-fw-fz-lh-ls-col($ff-roboto, 700, 18px, 2, 0.06em, $color-black);
+    margin-top: 0px;
+    margin-left: 24px;
+    margin-bottom: 4px;
+    padding-top: 20px;
+  }
+
+  &__project-discription {
+    @include ff-fw-fz-lh-ls-col($ff-roboto, 400, 16px, 1.87, 0.03em, $color-grey);
+    margin-top: 0px;
+    margin-bottom: 20px;
+    margin-left: 24px;
+  }
+
+  &__image {
+    vertical-align: middle;
+    background: $color-white;
+    border-top: 1px solid $border-images;
+    border-right: 1px solid $border-images;
+    border-left: 1px solid $border-images;
+  }
+
+  &__border {
+    background: $color-white;
+    border-left: 1px solid $border-images;
+    border-bottom: 1px solid $border-images;
+    border-right: 1px solid $border-images;
+  }
+
+  &__box-overlay {
+    position: relative;
+    overflow: hidden;
+    font-size: 0;
+  }
+
+  &__item-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: $portfolio-bg-overlay;
+    transform: translateY(+100%);
+    transition: $trans;
+  }
+
+  &__box-overlay:focus .portfolio-projects__item-overlay,
+  &__box-overlay:hover .portfolio-projects__item-overlay {
+    transform: translateX(0);
+    transition: $trans;
+  }
+
+  &__images-shadow .portfolio-projects__item-overlay {
+    transform: translateY(+100%);
+    transition: $trans;
+  }
+
+  &__images-shadow:focus &__item-overlay,
+  &__images-shadow:hover &__item-overlay {
+    transform: translateY(0);
+    transition: $trans;
+  }
+
+  &__text-overlay {
+    width: 100%;
+    height: 100%;
+    @include ff-fw-fz-lh-ls-col($ff-roboto, 400, 18px, 1.55, 0.03em, $color-white);
+    margin: 0;
+    padding: 49px 45px 49px 24px;
+  }
+}

@@ -1,0 +1,99 @@
+//colors
+$color-black: #212121;
+$color-white: #ffffff;
+$color-blue: #2196f3;
+$color-grey: #757575;
+$bg-color: #2f303a;
+$mod-pl-hol: rgba(117, 117, 117, 0.5);
+$bg-white-color: #f5f4fa;
+$bg-light-grey: #f5f4fa;
+$border-button: #ececec;
+$border-images: #eeeeee;
+$border-frames-clients: #afb1b8;
+$icons-fill-grey: #afb1b8;
+$lienar-grad: (90deg, rgba(47, 48, 58, 0.4) 0%, rgba(47, 48, 58, 0.4) 0%);
+$bg-our-act: rgba(47, 48, 58, 0.8);
+$footer-social-icons-bg: rgba(255, 255, 255, 0.1);
+$footer-input-col: rgba(255, 255, 255, 0.6);
+$footer-input-border: rgba(255, 255, 255, 0.3);
+$portfolio-bg-overlay: rgba(33, 150, 243, 0.9);
+$cls-but-col: rgba(0, 0, 0, 0.1);
+//shadows
+$our-team-box-shad: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+  0px 2px 1px rgba(0, 0, 0, 0.2);
+$portfolio-img-shad: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+  1px 4px 6px rgba(0, 0, 0, 0.16);
+$portfolio-shad-bnt: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+  0px 2px 2px rgba(0, 0, 0, 0.12);
+$btn-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+//font-family
+$ff-roboto: 'Roboto';
+$ff-raleway: 'Raleway';
+//dispaly
+$dispf: flex;
+$dispi-b: inline-block;
+$dispb: block;
+//justify-content
+$jc-sb: space-between;
+//justify-content
+$jc-c: center;
+// align-items
+$ai-c: center;
+//text-align
+$ta-c: center;
+//padding
+$pt: 24px;
+$pb: 24px;
+$pr: 24px;
+$pl: 24px;
+//margin
+$mt: 24px;
+$mb: 25px;
+$mr: 25px;
+$ml: 25px;
+//text-decoration
+$td: none;
+//font-weight
+$fw: 700;
+//font-size
+$fz: 26px;
+//line-height
+$lh: 1.19;
+//letter-spacing
+$ls: 0.03em;
+//transition
+$trans: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+@mixin header-nav($dispf, $jc-sb, $pt, $pb, $td, $color-black) {
+  display: $dispf;
+  justify-content: $jc-sb;
+  padding-top: $pt;
+  padding-bottom: $pb;
+  text-decoration: $td;
+  color: $color-black;
+};
+
+//font-family,font-weight,font-size,line-height,letter-spacing
+@mixin ff-fw-fz-lh-ls($ff-raleway, $fw, $fz, $lh, $ls) {
+  font-family: $ff-raleway;
+  font-weight: $fw;
+  font-size: $fz;
+  line-height: $lh;
+  letter-spacing: $ls;
+};
+
+//font-family,font-weight,font-size,line-height,letter-spacing,color
+@mixin ff-fw-fz-lh-ls-col($ff-raleway, $fw, $fz, $lh, $ls, $color-blue) {
+  font-family: $ff-raleway;
+  font-weight: $fw;
+  font-size: $fz;
+  line-height: $lh;
+  letter-spacing: $ls;
+  color: $color-blue;
+};
+
+//color,transition
+@mixin trans-col($color-blue, $trans) {
+  color: $color-blue;
+  transition: $trans;
+};

@@ -1,0 +1,39 @@
+.wrapper-main-studio-discription {
+  width: 1600px;
+  height: 600px;
+  margin: 0 auto;
+  padding: 200px 452px 200px 452px;
+  background-color: var(--bg-color);
+  background-image: url('../images/images-studio/headermane-img.jpg'), linear-gradient($lienar-grad);
+
+  .main-studio {
+    display: $dispf;
+    flex-direction: column;
+    align-items: $ai-c;
+    position: absolute;
+    margin: 0 auto;
+
+    &__main-header {
+      max-width: 696px;
+      text-align: $ta-c;
+      @include ff-fw-fz-lh-ls-col($ff-roboto, 900, 44px, 1.36, 0.06em, $color-white);
+      margin: 0 auto;
+      margin-bottom: 30px;
+    }
+
+    &__studio-button {
+      width: 200px;
+      height: 50px;
+      border: none;
+      box-shadow: $btn-shadow;
+      border-radius: 4px;
+      border-radius: 4px;
+      background: $color-blue;
+      cursor: pointer;
+    }
+
+    &__button-text {
+      @include ff-fw-fz-lh-ls-col($ff-roboto, 700, 16px, 1.87, 0.06em, $color-white);
+    }
+  }
+}

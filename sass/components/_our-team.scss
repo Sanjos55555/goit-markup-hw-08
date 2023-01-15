@@ -1,0 +1,83 @@
+.our-team-area {
+  max-width: 1600px;
+  background: $bg-white-color;
+  padding-bottom: 94px;
+  padding-top: 94px;
+
+  &__header {
+    text-align: $ta-c;
+    @include ff-fw-fz-lh-ls-col($ff-roboto, 700, 36px, 1.16, 0.03em, $color-black);
+    margin: 0;
+    margin-bottom: 50px;
+  }
+
+  .our-team {
+    display: $dispf;
+    list-style: none;
+    justify-content: $jc-sb;
+    margin: 0 auto;
+    padding: 0;
+    gap: 30px;
+
+    &__img-discription {
+      max-width: 270px;
+      height: 260px;
+    }
+
+    &__border {
+      text-align: $ta-c;
+      background: $color-white;
+      box-shadow: $our-team-box-shad;
+      border-radius: 0px 0px 4px 4px;
+    }
+
+    &__employee-name {
+      @include ff-fw-fz-lh-ls-col($ff-roboto, 500, 16px, 1.19, 0.03em, $color-black);
+      margin: 0;
+      padding-top: 30px;
+    }
+
+    &__employee-position {
+      @include ff-fw-fz-lh-ls-col($ff-roboto, 400, 16px, 1.18, 0.03em, $color-grey);
+      margin-top: 10px;
+      margin-bottom: 0;
+    }
+
+    &__social-box {
+      display: $dispf;
+      list-style: none;
+      fill: $icons-fill-grey;
+      padding: 16px 32px 18px 32px;
+      gap: 10px;
+    }
+
+    &__icon {
+      border-radius: 50%;
+      transition: $trans;
+    }
+
+    &__icon:hover {
+      border-radius: 50%;
+      background-color: $color-blue;
+      fill: $color-white;
+      cursor: pointer;
+      transition: $trans;
+    }
+
+    &__icon:active {
+      border-radius: 50%;
+      background-color: $color-blue;
+      fill: $color-white;
+    }
+
+    &__social-link {
+      fill: $icons-fill-grey;
+    }
+
+    &__social-link:focus &__icon {
+      border-radius: 50%;
+      fill: $color-white;
+      background-color: $color-blue;
+    }
+  }
+}

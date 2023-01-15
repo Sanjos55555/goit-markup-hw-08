@@ -1,0 +1,36 @@
+body {
+  background: $color-white;
+}
+
+.portfolio-border {
+  border-bottom: 1px solid $border-button;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.close-btn-discription {
+  position: absolute;
+  top: 6px;
+  left: 5px;
+}
+
+.close-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  background-color: $color-white;
+  border-radius: 50%;
+  border: 1px solid $cls-but-col;
+  cursor: pointer;
+}

@@ -1,0 +1,25 @@
+.advantages {
+  display: $dispf;
+  list-style: none;
+  justify-content: $jc-sb;
+  margin: 0 auto;
+  padding: 0;
+  padding-top: 94px;
+  padding-bottom: 94px;
+  gap: 30px;
+
+  &__text-block {
+    @include ff-fw-fz-lh-ls-col($ff-roboto, 700, 14px, 1.14, 0.03em, $color-black);
+  }
+
+  &__text-block-discription {
+    max-width: 270px;
+    @include ff-fw-fz-lh-ls-col($ff-roboto, 400, 14px, 1.71, 0.03em, $color-black);
+  }
+
+  &__advantages-icon {
+    border-radius: 4px;
+    background-color: $bg-light-grey;
+    cursor: pointer;
+  }
+}

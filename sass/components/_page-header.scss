@@ -1,0 +1,94 @@
+
+  .nav-discription {
+    @include header-nav($dispf, $jc-sb, $pt, $pb, $td, $color-black);
+
+    &__nav-area {
+      display: flex;
+      align-items: $ai-c;
+    }
+
+    .main-logo {
+      text-decoration: $td;
+
+      &__top-logo-one {
+        @include ff-fw-fz-lh-ls-col($ff-raleway, $fw, $fz, $lh, $ls, $color-blue);
+      }
+
+      &__top-logo-two {
+        @include ff-fw-fz-lh-ls-col($ff-raleway, $fw, $fz, $lh, $ls, $color-black);
+      }
+    }
+
+    &__site-navigation {
+      display: $dispf;
+      list-style: none;
+      @include ff-fw-fz-lh-ls($ff-roboto, 500, 14px, 1.14, 0.02em);
+      margin-top: 0;
+      margin-bottom: 0;
+      margin-left: 93px;
+      padding-left: 0;
+      gap: 46px;
+    }
+
+    &__item-agency,
+    &__item-portfolio,
+    &__item-contact {
+      text-decoration: $td;
+      color: $color-black;
+    }
+
+    &__strip,
+    &__item-portfolio,
+    &__item-contact {
+      text-decoration: $td;
+      color: $color-black;
+    }
+
+    &__strip::after {
+      position: relative;
+      display: $dispf;
+      content: '';
+      height: 4px;
+      width: 100%;
+      top: 30px;
+      background: $color-blue;
+      border-radius: 2px;
+    }
+
+    &__social-mail {
+      color: $color-grey;
+      text-decoration: $td;
+    }
+
+    &__social-tel {
+      color: $color-grey;
+      text-decoration: $td;
+    }
+
+    &__contact-us {
+      display: $dispf;
+      align-items: $ai-c;
+      list-style-type: none;
+      @include ff-fw-fz-lh-ls($ff-roboto, 500, 14px, 1.14, 0.02em);
+      margin: 0px;
+      padding: 0px;
+      margin-left: 271px;
+      gap: 50px;
+    }
+
+    &__icon {
+      fill: currentColor;
+      vertical-align: middle;
+      margin-right: 10px;
+    }
+
+    &__strip:hover,
+    &__item-agency:hover,
+    &__item-portfolio:hover,
+    &__item-contact:hover,
+    &__social-mail:hover,
+    &__social-tel:hover,
+    &__icon:hover {
+      @include trans-col($color-blue, $trans);
+    }
+  }

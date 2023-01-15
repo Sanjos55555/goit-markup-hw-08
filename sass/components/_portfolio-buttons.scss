@@ -1,0 +1,28 @@
+.portfolio-buttons-area {
+  display: $dispf;
+  flex-direction: row;
+  justify-content: $jc-c;
+  list-style-type: none;
+  margin: 0 auto;
+  padding: 0;
+  padding-top: 94px;
+  padding-bottom: 50px;
+  gap: 8px;
+
+  &__button {
+    @include ff-fw-fz-lh-ls-col($ff-roboto, 500, 16px, 1.62, 0.03em, $color-black);
+    background: $bg-white-color;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 6px 22px 6px 22px;
+  }
+
+  &__button:focus,
+  &__button:hover {
+    color: $color-white;
+    background-color: $color-blue;
+    box-shadow: $portfolio-shad-bnt;
+    transition: $trans;
+  }
+}
