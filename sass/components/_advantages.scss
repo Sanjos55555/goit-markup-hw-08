@@ -2,24 +2,38 @@
   display: $dispf;
   list-style: none;
   justify-content: $jc-sb;
+  flex-direction: column;
   margin: 0 auto;
   padding: 0;
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
   gap: 30px;
 
   &__text-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+  }
+
+  &__text-title {
     @include ff-fw-fz-lh-ls-col($ff-roboto, 700, 14px, 1.14, 0.03em, $color-black);
   }
 
-  &__text-block-discription {
-    max-width: 270px;
+  &__text-discription {
+    max-width: 28.12rem;
     @include ff-fw-fz-lh-ls-col($ff-roboto, 400, 14px, 1.71, 0.03em, $color-black);
+    margin-top: 10px;  
   }
 
   &__advantages-icon {
     border-radius: 4px;
     background-color: $bg-light-grey;
     cursor: pointer;
+    svg{
+    display: block;
+    margin: 0 auto;
+  }
   }
 }
+

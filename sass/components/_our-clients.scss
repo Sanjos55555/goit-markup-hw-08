@@ -1,7 +1,5 @@
 .our-clients {
-  padding-top: 94px;
-  padding-bottom: 94px;
-  margin: 0;
+  margin: 0 auto;
   margin-bottom: 50px;
 
   &__header {
@@ -12,14 +10,17 @@
   &__list-items {
     list-style: none;
     display: $dispf;
-    justify-content: $jc-sb;
+    flex-wrap: wrap;
+    justify-content: space-around;
     cursor: pointer;
     margin: 0 auto;
+    margin-top: 30px;
     padding: 0px;
+    gap: 20px;
   }
 
   &__icon {
-    width: 170px;
+    width: 210px;
     height: 92px;
     border: 1px solid $border-frames-clients;
     border-radius: 4px;

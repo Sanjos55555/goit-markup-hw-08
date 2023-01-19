@@ -1,26 +1,36 @@
+.container-header {
+  max-width: 480px;
+  display: flex;
+  justify-content: $jc-sb;
+  margin: 0 auto;
+  margin-top: 16px;
+  padding: 0 15px;
 
-  .nav-discription {
+    .nav-discription {
     @include header-nav($dispf, $jc-sb, $pt, $pb, $td, $color-black);
+      display: flex;
+      padding: 0;
 
     &__nav-area {
       display: flex;
-      align-items: $ai-c;
+      
     }
 
     .main-logo {
       text-decoration: $td;
+      padding: 0;
 
       &__top-logo-one {
-        @include ff-fw-fz-lh-ls-col($ff-raleway, $fw, $fz, $lh, $ls, $color-blue);
+        @include ff-fw-fz-lh-ls-col($ff-raleway, 700, 24px, 1.167, 0.03em, $color-blue);
       }
 
       &__top-logo-two {
-        @include ff-fw-fz-lh-ls-col($ff-raleway, $fw, $fz, $lh, $ls, $color-black);
+        @include ff-fw-fz-lh-ls-col($ff-raleway, 700, 24px, 1.167, 0.03em, $color-black);
       }
     }
 
     &__site-navigation {
-      display: $dispf;
+      display: none;
       list-style: none;
       @include ff-fw-fz-lh-ls($ff-roboto, 500, 14px, 1.14, 0.02em);
       margin-top: 0;
@@ -35,6 +45,7 @@
     &__item-contact {
       text-decoration: $td;
       color: $color-black;
+      display: none;
     }
 
     &__strip,
@@ -42,6 +53,7 @@
     &__item-contact {
       text-decoration: $td;
       color: $color-black;
+      display: none;
     }
 
     &__strip::after {
@@ -53,6 +65,7 @@
       top: 30px;
       background: $color-blue;
       border-radius: 2px;
+      display: none;
     }
 
     &__social-mail {
@@ -63,6 +76,7 @@
     &__social-tel {
       color: $color-grey;
       text-decoration: $td;
+      display: none;
     }
 
     &__contact-us {
@@ -74,12 +88,14 @@
       padding: 0px;
       margin-left: 271px;
       gap: 50px;
+      display: none;
     }
 
     &__icon {
       fill: currentColor;
       vertical-align: middle;
       margin-right: 10px;
+      display: none;
     }
 
     &__strip:hover,
@@ -90,5 +106,116 @@
     &__social-tel:hover,
     &__icon:hover {
       @include trans-col($color-blue, $trans);
+      display: none;
     }
-  }
+}
+}
+
+ 
+//   @media screen and (max-width: 768px) and (min-width: 480px) {
+//     body {
+//       font-size: 50px;
+//       padding: 50px;
+//       border: 8px solid black;
+//       background: yellow;
+// }
+//   }
+
+// .container {
+//   max-width: 1200px;
+//   margin: 0 auto;
+
+//   .nav-discription {
+//     @include header-nav($dispf, $jc-sb, $pt, $pb, $td, $color-black);
+
+//     &__nav-area {
+//       display: flex;
+//       align-items: $ai-c;
+//     }
+
+//     .main-logo {
+//       text-decoration: $td;
+
+//       &__top-logo-one {
+//         @include ff-fw-fz-lh-ls-col($ff-raleway, $fw, $fz, $lh, $ls, $color-blue);
+//       }
+
+//       &__top-logo-two {
+//         @include ff-fw-fz-lh-ls-col($ff-raleway, $fw, $fz, $lh, $ls, $color-black);
+//       }
+//     }
+
+//     &__site-navigation {
+//       display: $dispf;
+//       list-style: none;
+//       @include ff-fw-fz-lh-ls($ff-roboto, 500, 14px, 1.14, 0.02em);
+//       margin-top: 0;
+//       margin-bottom: 0;
+//       margin-left: 93px;
+//       padding-left: 0;
+//       gap: 46px;
+//     }
+
+//     &__item-agency,
+//     &__item-portfolio,
+//     &__item-contact {
+//       text-decoration: $td;
+//       color: $color-black;
+//     }
+
+//     &__strip,
+//     &__item-portfolio,
+//     &__item-contact {
+//       text-decoration: $td;
+//       color: $color-black;
+//     }
+
+//     &__strip::after {
+//       position: relative;
+//       display: $dispf;
+//       content: '';
+//       height: 4px;
+//       width: 100%;
+//       top: 30px;
+//       background: $color-blue;
+//       border-radius: 2px;
+//     }
+
+//     &__social-mail {
+//       color: $color-grey;
+//       text-decoration: $td;
+//     }
+
+//     &__social-tel {
+//       color: $color-grey;
+//       text-decoration: $td;
+//     }
+
+//     &__contact-us {
+//       display: $dispf;
+//       align-items: $ai-c;
+//       list-style-type: none;
+//       @include ff-fw-fz-lh-ls($ff-roboto, 500, 14px, 1.14, 0.02em);
+//       margin: 0px;
+//       padding: 0px;
+//       margin-left: 271px;
+//       gap: 50px;
+//     }
+
+//     &__icon {
+//       fill: currentColor;
+//       vertical-align: middle;
+//       margin-right: 10px;
+//     }
+
+//     &__strip:hover,
+//     &__item-agency:hover,
+//     &__item-portfolio:hover,
+//     &__item-contact:hover,
+//     &__social-mail:hover,
+//     &__social-tel:hover,
+//     &__icon:hover {
+//       @include trans-col($color-blue, $trans);
+//     }
+//   }
+// }

@@ -1,34 +1,32 @@
 .our-team-area {
-  max-width: 1600px;
   background: $bg-white-color;
-  padding-bottom: 94px;
-  padding-top: 94px;
+  padding-bottom: 60px;
 
   &__header {
     text-align: $ta-c;
     @include ff-fw-fz-lh-ls-col($ff-roboto, 700, 36px, 1.16, 0.03em, $color-black);
     margin: 0;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
+    padding-top: 60px;
   }
 
   .our-team {
-    display: $dispf;
+    display: $dispb;
     list-style: none;
-    justify-content: $jc-sb;
-    margin: 0 auto;
-    padding: 0;
+    padding: 0 16px;
     gap: 30px;
 
-    &__img-discription {
-      max-width: 270px;
-      height: 260px;
-    }
+    // &__img-discription {
+    //   width: 320px;
+    //   height: auto;
+    // }
 
     &__border {
       text-align: $ta-c;
       background: $color-white;
       box-shadow: $our-team-box-shad;
       border-radius: 0px 0px 4px 4px;
+      margin-top: 30px;
     }
 
     &__employee-name {
@@ -45,9 +43,9 @@
 
     &__social-box {
       display: $dispf;
+      justify-content: $jc-c;
       list-style: none;
       fill: $icons-fill-grey;
-      padding: 16px 32px 18px 32px;
       gap: 10px;
     }
 
