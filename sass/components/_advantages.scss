@@ -9,10 +9,10 @@
   gap: 30px;
 
   &__text-block {
-    display: flex;
+    display: $dispf;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: $jc-c;
+    align-items: $ai-c;
     margin-top: 30px;
   }
 
@@ -23,17 +23,71 @@
   &__text-discription {
     max-width: 28.12rem;
     @include ff-fw-fz-lh-ls-col($ff-roboto, 400, 14px, 1.71, 0.03em, $color-black);
-    margin-top: 10px;  
+    margin-top: 10px;
   }
 
   &__advantages-icon {
     border-radius: 4px;
     background-color: $bg-light-grey;
     cursor: pointer;
-    svg{
-    display: block;
-    margin: 0 auto;
-  }
+
+    svg {
+      display: $dispb;
+      margin: 0 auto;
+    }
   }
 }
 
+@media screen and (min-width: 768px) {
+  .advantages {
+    max-width: 768px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    &__advantages-icon {
+      max-width: 354px;
+      height: 120px;
+      border-radius: 4px;
+      background-color: $bg-light-grey;
+      cursor: pointer;
+    }
+
+    &__text-block {
+      width: 354px;
+      height: 120px;
+      display: $dispf;
+      flex-direction: column;
+      justify-content: start;
+      align-items: flex-start;
+      margin-top: 30px;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .advantages {
+    max-width: 1200px;
+    display: flex;
+    margin: 0;
+
+    &__advantages-icon {
+      max-width: 270px;
+      height: 120px;
+      border-radius: 4px;
+      background-color: $bg-light-grey;
+      cursor: pointer;
+    }
+
+    &__text-block {
+      width: 270px;
+      height: 120px;
+      display: $dispf;
+      flex-direction: column;
+      justify-content: start;
+      align-items: flex-start;
+      margin-top: 30px;
+    }
+  }
+}

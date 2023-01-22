@@ -1,117 +1,169 @@
-.container-header {
-  max-width: 480px;
-  display: flex;
-  justify-content: $jc-sb;
-  margin: 0 auto;
-  margin-top: 16px;
-  padding: 0 15px;
+.nav-discription {
+  @include header-nav($dispf, $jc-sb, $pt, $pb, $td, $color-black);
+  display: $dispf;
+  padding: 0;
 
-    .nav-discription {
+  &__nav-area {
+    display: flex;
+  }
+
+  .main-logo {
+    text-decoration: $td;
+    padding: 0;
+    padding-left: 15px;
+
+    &__top-logo-one {
+      @include ff-fw-fz-lh-ls-col($ff-raleway, 700, 24px, 1.167, 0.03em, $color-blue);
+    }
+
+    &__top-logo-two {
+      @include ff-fw-fz-lh-ls-col($ff-raleway, 700, 24px, 1.167, 0.03em, $color-black);
+    }
+  }
+
+  &__site-navigation {
+    display: none;
+    list-style: none;
+    @include ff-fw-fz-lh-ls($ff-roboto, 500, 14px, 1.14, 0.02em);
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 93px;
+    padding-left: 0;
+    gap: 46px;
+  }
+
+  &__item-agency,
+  &__item-portfolio,
+  &__item-contact {
+    text-decoration: $td;
+    color: $color-black;
+  }
+
+  &__strip,
+  &__item-portfolio,
+  &__item-contact {
+    text-decoration: $td;
+    color: $color-black;
+  }
+
+  &__strip::after {
+    position: relative;
+    display: $dispf;
+    content: '';
+    height: 4px;
+    width: 100%;
+    top: 30px;
+    background: $color-blue;
+    border-radius: 2px;
+  }
+
+  &__social-mail {
+    color: $color-grey;
+    text-decoration: $td;
+  }
+
+  &__social-tel {
+    color: $color-grey;
+    text-decoration: $td;
+  }
+
+  &__contact-us {
+    display: none;
+    align-items: $ai-c;
+    list-style-type: none;
+    @include ff-fw-fz-lh-ls($ff-roboto, 500, 14px, 1.14, 0.02em);
+    margin: 0px;
+    padding: 0px;
+    margin-left: 271px;
+    gap: 50px;
+  }
+
+  &__icon {
+    fill: currentColor;
+    vertical-align: middle;
+    margin-right: 10px;
+  }
+
+  &__strip:hover,
+  &__item-agency:hover,
+  &__item-portfolio:hover,
+  &__item-contact:hover,
+  &__social-mail:hover,
+  &__social-tel:hover,
+  &__icon:hover {
+    @include trans-col($color-blue, $trans);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .nav-discription {
     @include header-nav($dispf, $jc-sb, $pt, $pb, $td, $color-black);
+    display: $dispf;
+    justify-content: space-between;
+    padding: 0;
+
+    &__site-navigation {
       display: flex;
-      padding: 0;
+      list-style: none;
+      @include ff-fw-fz-lh-ls($ff-roboto, 500, 14px, 1.14, 0.02em);
+    }
+
+    &__contact-us {
+      display: inline-block;
+      list-style-type: none;
+      @include ff-fw-fz-lh-ls($ff-roboto, 500, 12px, 1.14, 0.02em);
+      margin-left: 100px;
+    }
+
+    &__social-mail {
+      margin-left: -2px;
+    }
+
+    &__social-tel {
+      margin-left: -4px;
+    }
+
+    &__strip::after {
+      top: 38px;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .nav-discription {
+    width: 1600px;
+    @include header-nav($dispf, $jc-sb, $pt, $pb, $td, $color-black);
 
     &__nav-area {
       display: flex;
-      
+      align-items: $ai-c;
     }
 
     .main-logo {
       text-decoration: $td;
-      padding: 0;
 
       &__top-logo-one {
-        @include ff-fw-fz-lh-ls-col($ff-raleway, 700, 24px, 1.167, 0.03em, $color-blue);
+        @include ff-fw-fz-lh-ls-col($ff-raleway, 700, 26px, 1.19, 0.03em, $color-blue);
       }
 
       &__top-logo-two {
-        @include ff-fw-fz-lh-ls-col($ff-raleway, 700, 24px, 1.167, 0.03em, $color-black);
+        @include ff-fw-fz-lh-ls-col($ff-raleway, 700, 26px, 1.19, 0.03em, $color-black);
       }
     }
 
-    &__site-navigation {
-      display: none;
-      list-style: none;
-      @include ff-fw-fz-lh-ls($ff-roboto, 500, 14px, 1.14, 0.02em);
-      margin-top: 0;
-      margin-bottom: 0;
-      margin-left: 93px;
-      padding-left: 0;
-      gap: 46px;
-    }
-
-    &__item-agency,
-    &__item-portfolio,
-    &__item-contact {
-      text-decoration: $td;
-      color: $color-black;
-      display: none;
-    }
-
-    &__strip,
-    &__item-portfolio,
-    &__item-contact {
-      text-decoration: $td;
-      color: $color-black;
-      display: none;
+    &__contact-us {
+      display: flex;
+      justify-content: space-between;
+      list-style-type: none;
+      @include ff-fw-fz-lh-ls($ff-roboto, 500, 12px, 1.14, 0.02em);
     }
 
     &__strip::after {
-      position: relative;
-      display: $dispf;
-      content: '';
-      height: 4px;
-      width: 100%;
       top: 30px;
-      background: $color-blue;
-      border-radius: 2px;
-      display: none;
     }
-
-    &__social-mail {
-      color: $color-grey;
-      text-decoration: $td;
-    }
-
-    &__social-tel {
-      color: $color-grey;
-      text-decoration: $td;
-      display: none;
-    }
-
-    &__contact-us {
-      display: $dispf;
-      align-items: $ai-c;
-      list-style-type: none;
-      @include ff-fw-fz-lh-ls($ff-roboto, 500, 14px, 1.14, 0.02em);
-      margin: 0px;
-      padding: 0px;
-      margin-left: 271px;
-      gap: 50px;
-      display: none;
-    }
-
-    &__icon {
-      fill: currentColor;
-      vertical-align: middle;
-      margin-right: 10px;
-      display: none;
-    }
-
-    &__strip:hover,
-    &__item-agency:hover,
-    &__item-portfolio:hover,
-    &__item-contact:hover,
-    &__social-mail:hover,
-    &__social-tel:hover,
-    &__icon:hover {
-      @include trans-col($color-blue, $trans);
-      display: none;
-    }
-}
+  }
 }
 
- 
 //   @media screen and (max-width: 768px) and (min-width: 480px) {
 //     body {
 //       font-size: 50px;
@@ -121,7 +173,7 @@
 // }
 //   }
 
-// .container {
+// .container-header {
 //   max-width: 1200px;
 //   margin: 0 auto;
 

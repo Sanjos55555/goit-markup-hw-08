@@ -4,7 +4,7 @@
 
   &__header {
     text-align: $ta-c;
-    @include ff-fw-fz-lh-ls-col($ff-roboto, 700, 36px, 1.16, 0.03em, $color-black);
+    @include ff-fw-fz-lh-ls-col($ff-roboto, 700, 28px, 1.16, 0.03em, $color-black);
   }
 
   &__list-items {
@@ -32,5 +32,17 @@
     border: 1px solid $color-blue;
     border-radius: 4px;
     transition: $trans;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .our-clients {
+    &__icon {
+      width: 170px;
+      height: 92px;
+      border: 1px solid $border-frames-clients;
+      border-radius: 4px;
+      fill: $icons-fill-grey;
+    }
   }
 }

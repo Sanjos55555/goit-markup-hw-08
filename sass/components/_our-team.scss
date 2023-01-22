@@ -4,7 +4,7 @@
 
   &__header {
     text-align: $ta-c;
-    @include ff-fw-fz-lh-ls-col($ff-roboto, 700, 36px, 1.16, 0.03em, $color-black);
+    @include ff-fw-fz-lh-ls-col($ff-roboto, 700, 28px, 1.16, 0.03em, $color-black);
     margin: 0;
     margin-bottom: 30px;
     padding-top: 60px;
@@ -77,5 +77,32 @@
       fill: $color-white;
       background-color: $color-blue;
     }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .our-team-area {
+    .our-team {
+      max-width: 768px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 25px;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .our-team-area {
+    .our-team {
+      max-width: 1200px;
+      display: flex;
+      flex-direction: row;
+      gap: 25px;
+    }
+  }
+
+  img {
+    max-width: 270px;
   }
 }

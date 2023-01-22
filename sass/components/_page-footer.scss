@@ -11,18 +11,18 @@
   text-decoration: none;
 
   &__logo-one {
-    @include ff-fw-fz-lh-ls-col($ff-raleway, 700, 26px, 1.19, 0.03em, $color-blue);
+    @include ff-fw-fz-lh-ls-col($ff-raleway, 700, 24px, 1.19, 0.03em, $color-blue);
     text-decoration: $td;
   }
 
   &__logo-two {
-    @include ff-fw-fz-lh-ls-col($ff-raleway, 700, 26px, 1.19, 0.03em, $color-white);
+    @include ff-fw-fz-lh-ls-col($ff-raleway, 700, 24px, 1.19, 0.03em, $color-white);
     text-decoration: $td;
   }
 }
 
 .footer-nav {
-  display: block;
+  display: $dispb;
   text-align: $ta-c;
   list-style: none;
   @include ff-fw-fz-lh-ls($ff-roboto, 400, 14px, 1.71, 0.03em);
@@ -91,7 +91,7 @@
   }
 
   &__input {
-    min-width: 270px;
+    min-width: 290px;
     height: 50px;
     @include ff-fw-fz-lh-ls-col($ff-roboto, 400, 16px, 1.25, 0.03em, $footer-input-col);
     border-radius: 4px;
@@ -115,5 +115,156 @@
     border: none;
     margin-top: 30px;
     margin-bottom: 60px;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .footer-form {
+    margin: 0 auto;
+    display: $dispi-b;
+    text-align: $ta-c;
+    margin-top: 60px;
+
+    &__input {
+      min-width: 450px;
+      height: 50px;
+      @include ff-fw-fz-lh-ls-col($ff-roboto, 400, 16px, 1.25, 0.03em, $footer-input-col);
+      border-radius: 4px;
+      border: 1px solid $footer-input-border;
+      background-color: $bg-color;
+      margin: 0 auto;
+      margin-top: 20px;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      padding-left: 16px;
+    }
+  }
+}
+@media screen and (min-width: 768px) {
+  .flex {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 60px 76px;
+    padding-bottom: 0;
+
+    .footer-discription {
+      margin: 0;
+    }
+  }
+
+  .footer-form {
+    &__input-discription {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-left: 150px;
+    }
+
+    &__label {
+      margin-left: 150px;
+      text-transform: uppercase;
+      @include ff-fw-fz-lh-ls-col($ff-roboto, 700, 14px, 1.14, 0.03em, $color-white);
+    }
+
+    &__input {
+      max-width: 450px;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .flex {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    padding-top: 72px;
+    padding-bottom: 60px;
+    gap: 70px;
+
+    .footer-discription {
+      margin: 0;
+      padding: 0;
+
+      .footer-logo {
+        display: block;
+        text-align: start;
+        text-decoration: none;
+
+        &__logo-one {
+          @include ff-fw-fz-lh-ls-col($ff-raleway, 700, 24px, 1.19, 0.03em, $color-blue);
+          text-decoration: $td;
+        }
+
+        &__logo-two {
+          @include ff-fw-fz-lh-ls-col($ff-raleway, 700, 24px, 1.19, 0.03em, $color-white);
+          text-decoration: $td;
+        }
+      }
+
+      .footer-nav {
+        display: $dispb;
+        text-align: start;
+        list-style: none;
+        @include ff-fw-fz-lh-ls($ff-roboto, 400, 14px, 1.71, 0.03em);
+        margin-top: 20px;
+        gap: 9px;
+        padding-left: 0;
+      }
+    }
+
+    .footer-social-media {
+      display: $dispb;
+      margin: 0;
+
+      &__header {
+        @include ff-fw-fz-lh-ls-col($ff-roboto, 700, 14px, 1.14, 0.03em, $color-white);
+        margin: 0 auto;
+        padding-top: 10px;
+        text-align: start;
+      }
+    }
+  }
+
+  .footer-form {
+    margin: 0 auto;
+    margin-left: 45px;
+    padding-top: 82px;
+    text-align: start;
+
+    &__input-discription {
+      display: flex;
+      flex-direction: row;
+      margin: 0 auto;
+      padding: 0;
+      gap: 12px;
+    }
+
+    &__label {
+      margin-left: 50px;
+      text-transform: uppercase;
+      @include ff-fw-fz-lh-ls-col($ff-roboto, 700, 14px, 1.14, 0.03em, $color-white);
+    }
+
+    &__input {
+      max-width: 358px;
+      margin: 0;
+      margin-top: 20px;
+      padding-left: 15px;
+    }
+
+    &__button {
+      width: 200px;
+      height: 50px;
+      @include ff-fw-fz-lh-ls-col($ff-roboto, 700, 16px, 1.87, 0.03em, $color-white);
+      background: $color-blue;
+      box-shadow: $btn-shadow;
+      border-radius: 4px;
+      cursor: pointer;
+      border: none;
+      margin: 0;
+      margin-top: 20px;
+    }
   }
 }
