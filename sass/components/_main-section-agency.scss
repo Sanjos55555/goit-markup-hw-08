@@ -41,13 +41,13 @@
 
 @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .wrapper-main-studio-discription {
-    background-image: url('/images/images-studio/headermobile@2x.jpg');
+    background-image: url('../images/images-studio/headermobile@2x.jpg');
   }
 }
 
 @media screen and (min-width: 768px) {
   .wrapper-main-studio-discription {
-    background-image: url('/images/images-studio/header-tablet.jpg');
+    background-image: url('../images/images-studio/header-tablet.jpg');
     max-width: 1200px;
     height: 400px;
   }
@@ -57,7 +57,7 @@
   .wrapper-main-studio-discription {
     max-width: 1600px;
     height: 600px;
-    background-image: url('/images/images-studio/headermane-img.jpg');
+    background-image: url('../images/images-studio/headermane-img.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
